@@ -13,7 +13,7 @@ jobs:
       
       - name: Realizar contribución
         run: |
-          echo "Contribución automática: $(date)" >> beder.md
+          echo "Contribución automática: $(date)" >> README.md
       
       - name: Commit y push
         uses: EndBug/add-and-commit@v7

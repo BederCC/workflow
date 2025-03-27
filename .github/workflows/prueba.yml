@@ -1,4 +1,4 @@
-name: Contribuciones Automáticas
+name: Contribuciones manuales
 
 on:
   push: # Se ejecuta cada vez que haces un push al repositorio

@@ -1,0 +1,21 @@
+name: Contribuciones Automáticas
+
+on:
+  schedule:
+    - cron: '0 6 * * *' # Se ejecuta a la 1:00 AM hora de Perú (GMT-5)
+
+jobs:
+  auto-contrib:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v2
+      
+      - name: Realizar contribución
+        run: |
+          echo "Contribución automática: $(date)" >> README.md
+      
+      - name: Commit y push
+        uses: EndBug/add-and-commit@v7
+        with:
+          message: "Contribución automática"
